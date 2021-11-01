@@ -131,7 +131,7 @@ h2{
 
 .p1 p{
     font-family: 'Mulish', sans-serif;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -141,7 +141,7 @@ h2{
     justify-content: center;
     text-align: center;
     display: grid;
-    font-size: 500%;
+    font-size: 400%;
 }
 
 .p1 span{
@@ -239,7 +239,7 @@ h2{
 
 .caja{
     font-family: 'Mulish', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(255, 255, 255);
     box-sizing: border-box;
     padding: 30px 30px;
@@ -513,7 +513,7 @@ h2{
 @media only screen and (max-width: 1100px) {
     [class*="img"] {
         position:absolute;
-        margin: 120px 30%;
+        margin: 20vh 30%;
     }
 }
 
@@ -546,7 +546,7 @@ h2{
 @media only screen and (max-width: 1200px) {
     [class*="seccion1"] {
         width: 100%;
-        margin-top: 150px;
+        margin-top: 250px;
         margin-left: 0px;
     }
 }
