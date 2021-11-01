@@ -404,7 +404,7 @@ h2{
 }
 
 .container-iconos ul:hover a{
-    filter: blur(1px);
+    filter: blur(0.5px);
 }
 
 .container-iconos ul li a:hover{
