@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 body{
-    background: linear-gradient(to top, rgb(165, 104, 0), rgb(0, 2, 124));
+    background: linear-gradient(to top, rgb(139, 100, 31), rgb(0, 3, 156));
+    background-size: cover;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .logo{
@@ -16,7 +19,7 @@ body{
     padding-bottom: 120px;
 }
 
-.img{
+.imagen{
     position: absolute;
     margin: -5% 65%;
 }
@@ -42,7 +45,7 @@ body{
 nav{
     z-index: 5;
     position: fixed;
-    width: 100%;
+    width: 97%;
     justify-content: space-between;
     align-items: center;
 }
@@ -71,7 +74,7 @@ nav{
 }
 
 .menu a:active, .menu a:hover{
-    color: tomato;
+    color: rgb(255, 206, 71);
     transition: .5s;
 }
 
@@ -88,7 +91,7 @@ nav{
     position:relative;
     height: 0vh;
     top: 35px;
-    background-color: #645b63ad;
+    background-color: #550f4dd2;
     backdrop-filter: blur(10px);
     transition: all .5s;
     justify-content: center;
@@ -103,7 +106,7 @@ nav{
 }
 
 .nav-menu li a{
-    margin: 0 5%;
+    margin: 0 3%;
     font-family: monospace;
     color: rgb(255, 255, 255);
     font-size: 15px;
@@ -112,7 +115,7 @@ nav{
 }
 
 .nav-menu li a:active, .nav-menu li a:hover{
-    color: tomato;
+    color: rgb(255, 206, 71);
     transition: .5s;
 }
 
@@ -266,33 +269,204 @@ h2{
     font-size: 30px;
 }
 
-.seccion2{
-    width: 45%;
-    margin: 0 auto;
-    margin-top: 120px;
-    display: grid;
-    gap: 1rem;
-    grid-auto-rows: 20rem;
-    grid-template-columns: repeat(auto-fit, minmax(48rem, 1fr));
+#habilidades-proyectos{
+    margin-top: 100px;
+    height: 900px;
+    background: url(IMAGENES/partitura3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:#ffffff0c;
+    border-radius: 30px;
 }
 
-.proyectos{
-    box-shadow: 10px 8px 5px 0px rgba(0, 0, 0, 0.445);
-    position: relative;
-    background-color:#00000011;
-    border-radius: 5px;
-    font-size: 45px;
+.seccion2{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: grid;
+    gap: 1rem;
+    grid-template-rows: 15rem;
+    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
 }
 
 .seccion2 h3{
+    text-align: center;
     color: white;
     font-size: 28px;
     font-family: century gothic;
 }
 
-.proyectos h3{
-    text-align: center;
+
+.proyectos{
+    backdrop-filter: blur(5px);
+    position: relative;
+    box-shadow: 10px 8px 5px 0px rgba(0, 0, 0, 0.445);
+    border: #ffffff27 solid 2px;
+    background-color:#00000011;
+    border-radius: 5px;
+    font-size: 30px;
 }
+
+.imagenes{
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 10rem;
+    grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr))
+}
+
+.player {
+    margin-top: 100px;
+    position: relative;
+}
+
+.player .info {
+    position: absolute;
+    height: 60px;
+    top: 0;
+    opacity: 0;
+    left: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px 15px 5px 110px;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.player .info .artist,
+.player .info .name {
+    display: block;
+}
+
+.player .info .artist {
+    color: #222;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.player .info .name {
+    color: #999;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.player .info .progress-bar {
+    background-color: #ddd;
+    height: 2px;
+    width: 100%;
+    position: relative;
+}
+
+.player .info .progress-bar .bar {
+    position: relative;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #1eabff;
+    width: 10%;
+    transition: all 0.2s ease;
+}
+
+.player .info.active {
+    top: -60px;
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.player .control-panel {
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 300px;
+    height: 80px;
+    z-index: 5;
+    box-shadow: 0 20px 20px 5px rgba(183, 212, 245, 0.3);
+}
+
+.player .control-panel .album-art {
+    position: absolute;
+    left: 20px;
+    top: -15px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0);
+    transform: scale(1);
+    transition: all 0.5s ease;
+}
+
+.imagen-musica {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.player .control-panel .album-art::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80px;
+}
+
+.player .control-panel.active .album-art {
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0).2;
+    transform: scale(1.2);
+    transition: all o.5s ease;
+}
+
+.player .control-panel .controls {
+    display: flex;
+    justify-content: flex-end;
+    height: 80px;
+    padding: 0 15px
+}
+
+.player .control-panel .controls .prev,
+.player .control-panel .controls .play,
+.player .control-panel .controls .next {
+    width: 55px;
+    height: auto;
+    border-radius: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    margin: 5px 0;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3 ease;
+}
+
+.player .control-panel .controls .prev:hover,
+.player .control-panel .controls .play:hover,
+.player .control-panel .controls .next:hover {
+    background-color: #eee;
+    transition: background-color 0.3s ease;
+}
+
+.player .control-panel .controls .prev {
+    background-image: url(IMAGENES/img/back.svg);
+}
+
+.player .control-panel .controls .play {
+    background-image: url(IMAGENES/img/play.svg);
+}
+
+.player .control-panel .controls .next {
+    background-image: url(IMAGENES/img/next.svg);
+}
+
+.player .control-panel.active .controls .play {
+    background-image: url(IMAGENES/img/stop.svg);
+}
+
 
 .proyectos p{
     text-align: center;
@@ -301,14 +475,48 @@ h2{
     text-transform: uppercase;
 }
 
+.imagen1{
+    margin: 0 auto;
+    width:250px;
+    height: 150px;
+}
+
+.imagen2{
+    margin: 0 auto;
+    width:300px;
+}
+
+.imagen3{
+    margin: 0 auto;
+    width: 300px;
+}
 
 
-.imagenes{
+.proyectos-musica{
+    grid-column: 1/3;
+    backdrop-filter: blur(5px);
+    box-shadow: 10px 8px 5px 0px rgba(0, 0, 0, 0.445);
+    border: #ffffff27 solid 2px;
+    background-color:#00000011;
+    border-radius: 5px;
+    font-size: 45px;
+}
+
+.proyectos-musica p{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+
+
+.tecnologias{
     margin: -10px -25px;
     width: 100%;
 }
 
-.imagenes ul li{
+.tecnologias ul li{
     display: inline-block;
     margin: 0px 10px;
     width: 80px;
@@ -316,7 +524,7 @@ h2{
     text-align: center;
 }
 
-.imagenes ul li a{
+.tecnologias ul li a{
     border-radius: 5px;
     display: block;
     padding: 0 10px;
@@ -328,59 +536,55 @@ h2{
 }
 
 
-.imagenes ul li a p{
+.tecnologias ul li a p{
     color: rgb(255, 255, 255);
     font-size: 30%;
 }
 
-.imagenes ul:hover a{
+.tecnologias ul:hover a{
     filter: blur(0px);
 }
 
-.imagenes ul li a:hover{
+.tecnologias ul li a:hover{
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 5px 5px 0px rgba(0,0,0, .4);
     filter: none;
 }
 
-.imagenes ul li .css:hover{
+.tecnologias ul li .css:hover{
     background: rgb(0, 0, 0);
     color: rgb(0, 89, 255);
 }
 
-.imagenes ul li .html:hover{
+.tecnologias ul li .html:hover{
     color: rgb(207, 95, 3);
 }
 
 
-.imagenes ul li .python:hover{
-    color: #f7fc00;
-    background: #4f51d4
+.tecnologias ul li .python:hover{
+    color: #ffe873;
+    background: #306998
 }
 
 
 
 .habilidades{
+    backdrop-filter: blur(5px);
     box-shadow: 10px 8px 5px 0px rgba(0, 0, 0, 0.329);
+    border: #ffffff27 solid 2px;
     text-align: center;
     border-radius: 5px;
-    background: #00000011;
-}
-
-.habilidades p{
-    color: black;
+    background: #27272711;
     font-weight: 600;
 }
 
-.habilidades h3{
-    text-align:center;
-}
 
 .contacto{
     border-bottom: rgb(255, 255, 255) solid 2px;
     border-right: #ffffff solid 2px ;
     border-left: #ffffff solid 2px ;
     margin: 0 auto;
+    margin-top: 20vh;
     width: 80%;
     background: url(IMAGENES/footer.png);
     background-color: purple;
@@ -391,7 +595,6 @@ h2{
 .title-contacto{
     border: none;
     width: 350px;
-    margin: 70px auto;
     background: none;
     font-family: century gothic;
     color: rgb(255, 255, 255);
@@ -535,7 +738,7 @@ h2{
     }
 }
 
-@media only screen and (min-width: 1101px) {
+@media only screen and (min-width: 1101px) and (max-width: 1400px){
     [class="imagen-yo"] {
         position:absolute;
         margin: 0vh -2vw;
@@ -590,13 +793,22 @@ h2{
 }
 
 @media only screen and (max-width: 1800px) {
-    [class*="imagenes"] {
-        position:relative;
-        top: 80px;
-        left: 0px;
+    [class*="imagen1"] {
+        width: 200px;
     }
 }
 
+@media only screen and (max-width: 1800px) {
+    [class*="imagen2"] {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 1800px) {
+    [class*="imagen3"] {
+        width: 200px;
+    }
+}
 
 @media only screen and (max-width: 1200px) {
     [class*="header"] {
@@ -612,22 +824,20 @@ h2{
     }
 }
 
-@media only screen and (max-width: 1900px) {
-    [class*="proyectos"] {
-        padding: 0px 0px;
-        width: 100%;
-        align-items: center;
-        font-size: 20px;
-        margin: 0 0vw;
-    }
-  }
 
 @media only screen and (max-width: 1500px) {
     [class*="seccion2"] {
         width: 100%;
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 2fr));
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
         grid-auto-rows: 20rem;
         margin-left: 0px;
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 735px){
+    [class="proyectos-musica"] {
+        grid-column: 1;
     }
 }
     
@@ -637,12 +847,13 @@ h2{
         width: 100%;
         margin: 0px 0px;
         justify-content: center;
+        border-left: tomato solid 0px;
     }
 }
 
 @media only screen and (max-width: 1200px) {
     [class*="contacto"] {
-        margin-top: 150px;
+        margin-top: 10vh;
         width: 100%;
     }
 }
@@ -655,40 +866,5 @@ h2{
         margin: 0 -30px;
         width: 100%;
         border-right: tomato solid 0px;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    [class*="p2"] {
-        border-left: tomato solid 0px;
-    }
-}
-
-@media only screen and (max-width: 1500px) {
-    [class*="habilidades"] {
-        width: 100%;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    [class*="imagenes"] {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(0rem, 3fr));
-        grid-auto-rows: 0rem;
-        gap: 1rem;
-        margin: 50px -20px;
-        width: 100%;
-        font-size: 20px;
-        text-align: center;
-        align-items: center;
-    }
-}
-
-
-@media only screen and (max-width: 1200px) {
-    [class="imagenes"]
-    [ ul]
-    [li ] {
-        width: 5px;
     }
 }

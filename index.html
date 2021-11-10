@@ -10,6 +10,7 @@
         crossorigin="anonymous"></script>
     </head>
     <body>
+    <div id="sobre mi">
     <div class="main-header">
         <img class="logo" src="IMAGENES/poligono.png" alt="">
         <nav class= "hamburguesa">
@@ -18,16 +19,16 @@
                 <i class="fas fa-ellipsis-h"></i>
             </label>
             <ul class="nav-menu">
-                <li><a href="#">Sobre mi</a></li>
-                <li><a href="#">proyectos/habilidades</a></li>
-                <li><a href="#">contacto</a></li>
+                <li><a href="#sobre mi">Sobre mi</a></li>
+                <li><a href="#habilidades-proyectos">proyectos/habilidades</a></li>
+                <li><a href="#contacto">contacto</a></li>
             </ul>
         </nav>
         <nav class= "menu-tamañopc">
             <ul class="menu">
-                <a href="#">Sobre mi</a>
-                <a href="#">Habilidades/Proyectos</a>
-                <a href="#">contacto</a>
+                <a href= "#sobre mi">Sobre mi</a>
+                <a href= "#habilidades-proyectos">Habilidades/Proyectos</a>
+                <a href= "#contacto">contacto</a>
             </ul>
         </nav>
     </div>
@@ -46,10 +47,11 @@
                 <li>front end</li>
             </ul>
         </div>
-            <div class="img">
+            <div class="imagen">
                 <img class="imagen-yo" src="IMAGENES/IMG2 (2).png" alt="">
                 <img class ="flujo"src= IMAGENES/dots-line.png alt="">
             </div>
+        </div>
             <section class = "seccion1">
                     <p class= caja>
                         Hola me presento, soy de Chile, tengo Dieciocho años soy un
@@ -60,11 +62,12 @@
                         con mas lenguajes como JavaScript y PHP.
                     </p>
             </section>
-
+            <div id="habilidades-proyectos">
+                <br>
             <section class = "seccion2">
                     <div class="habilidades">
                         <h3>Habilidades</h3>
-                        <div class="imagenes">
+                        <div class="tecnologias">
                             <ul>
                                 <li><a class="css"><i class="fab fa-css3-alt"></i><p>CSS</p></a></li>
                                 <li><a  class="html"><i class="fab fa-html5"></i><p>HTML</p></a></li>
@@ -74,13 +77,44 @@
                     </div>
                     <div class= "proyectos">
                         <h3>
-                            proyectos
+                            Proyectos Web
                         </h3>
-                    <p>
-                        no hay proyectos por ahora
-                    </p>
+                        <p>
+                            No hay proyectos por ahora
+                        </p>
+                        <div class="imagenes">
+                        </div>
                     </div>
+                        <div class= "proyectos-musica">
+                            <h3>
+                                Proyectos de Musica
+                            </h3>
+                            <div class="player">
+                                <div id="info" class="info">
+                                    <span class="artist">Design</span>
+                                    <span class="name">Jocker Code</span>
+                                    <div class="progress-bar">
+                                        <div class="bar"></div>
+                                    </div>
+                                </div>   
+                        
+                                <div id="control-panel" class="control-panel">
+                                    <div class="album-art">
+                                        <img class="imagen-musica" src="IMAGENES/001.jpg" alt="">
+                                    </div>
+                                    <div class="controls">
+                                        <div class="prev"></div>
+                                        <div class="play" id="play"></div>
+                                        <div class="next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <audio id="Music" controls style="display: none;">
+                            <source  src="audio/jose-jose.mp3" type="audio/mpeg">
+                        </audio>
             </section>
+            <div id="contacto">
             <section class="contacto">
                 <h2 class="title-contacto">
                     ¿estas interesado? contactame
@@ -97,10 +131,7 @@
                     <span style = "--l: 'Ramos';">Ramos</span>
                 </div>
             </section>
-        <div>
-            <h1>
-
-            </h1>
-        </div>
+            </div>
     </body>
+<script src = "js/main.js"></script>
 </html>
